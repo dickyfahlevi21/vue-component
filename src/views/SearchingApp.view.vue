@@ -19,7 +19,15 @@
         </div>
       </form>
     </div>
-    <list-rendering :data="filteringData"/>
+    <p
+      class="bg-gray-200 rounded-lg mt-2"
+    >Selected Item</p>
+    {{ checkValue }}
+    <br>
+    <p
+      class="bg-gray-300 rounded-lg mt-2"
+    >Unselected Item</p>
+    <list-rendering :data="filteringData" v-model="checkValue" @click="clicking(checkValue)"/>
   </div>
 </template>
 <script>
@@ -43,6 +51,7 @@ export default {
             },
             filteringData: [],
             searchValue: "",
+            checkValue: [],
             jsonItem: dataDummy,
         };
     },
@@ -70,7 +79,11 @@ export default {
             } else {
                 this.filteringData = this.jsonItem
             }
-        }
+      },
+      clicking(click) {
+        this.checkValue = click
+        console.log(this.checkValue, 'test click')
+      }
     }
 };
 </script>

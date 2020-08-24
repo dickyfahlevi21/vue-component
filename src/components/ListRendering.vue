@@ -6,6 +6,7 @@
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">{{ json.title }}</div>
                     <p class="text-gray-700 text-base">{{ json.id }}</p>
+                    <input class="mr-2 leading-tight" type="checkbox" @input="$emit('click', $event.target.value)"> check me for select
                 </div>
             </div>
         </div>
@@ -14,6 +15,10 @@
 <script>
 export default {
     name: "ListRendering",
-    props: ["data"]
+    props: ["data", "value"],
+    model: {
+        prop: "input",
+        event: "click",
+    },
 };
 </script>
