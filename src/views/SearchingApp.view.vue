@@ -3,7 +3,7 @@
     <div class="flex justify-center my-16">
       <form>
         <div class="inline">
-          <search-box v-model="searchValue" v-on:change="filtering"/>
+          <search-box v-model="searchValue" @change="filtering"/>
           <p
             v-if="this.searchValue.length > 0"
             class="char inline p-3 rounded-lg ml-2 bg-teal-400 text-white"
