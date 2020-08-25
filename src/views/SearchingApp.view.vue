@@ -19,22 +19,18 @@
         </div>
       </form>
     </div>
-    <p
-      class="bg-gray-200 rounded-lg mt-2"
-    >Selected Item</p>
+    <!-- Selected Item belum sempet kepisah -->
+    <p class="bg-gray-200 rounded-lg mt-2">Selected Item</p>
     <div class="grid grid-flow-row grid-cols-3 gap-4">
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full" v-bind:src="checkValue.url">
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{{ checkValue.title }}</div>
-                <p class="text-gray-700 text-base">{{ checkValue.id }}</p>
-            </div>
-          </div>
+        <img class="w-full" v-bind:src="checkValue.url">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">{{ checkValue.title }}</div>
+            <p class="text-gray-700 text-base">{{ checkValue.id }}</p>
+        </div>
       </div>
+    </div>
     <br>
-    <p
-      class="bg-gray-300 rounded-lg mt-2"
-    >Unselected Item</p>
     <list-rendering :data="filteringData" v-model="checkValue" @click="clicking(checkValue)"/>
   </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p class="bg-gray-300 rounded-lg mt-2">Unselected Item</p>
         <div class="grid grid-flow-row grid-cols-3 grid-rows-3 gap-4">
             <div :key="json.id" v-for="json in data" class="max-w-sm rounded overflow-hidden shadow-lg">
                 <img class="w-full" v-bind:src="json.url">
