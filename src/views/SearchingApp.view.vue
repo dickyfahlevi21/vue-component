@@ -81,8 +81,7 @@ export default {
             }
       },
       clicking(click) {
-        this.checkValue = click
-        console.log(this.checkValue, 'test click')
+        console.log(click, 'test click')
       }
     }
 };
